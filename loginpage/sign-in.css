@@ -1,0 +1,62 @@
+:root{
+    --color-highlighter: #1d203d;
+    --color-main: #374775;
+    --color-lightmain: #607699;
+    --color-gray: #899fb5;
+    --color-dark: #15131D;
+    --color-white:  hsl(252, 30%, 100%);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background-color: var(--color-dark);
+}
+
+body h1{
+  color:aliceblue;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.btn-primary{
+  background-color: var(--color-main);
+  outline: var(--color-highlighter);
+  border-color: var(--color-highlighter);
+}
+
+.btn-primary:hover{
+  background-color: #374775;
+  outline: var(--color-main);
+  border-color: var(--color-main);
+}
+
+main form p, main form .checkbox label{
+  color:aliceblue;
+}
