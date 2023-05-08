@@ -15,6 +15,9 @@
     --card-padding: 1rem;
 }
 
+
+
+
 .makeitscroll{
     overflow-y: scroll;
     overflow-x: hidden;
@@ -44,7 +47,7 @@ body{
 
 .desktop-screen{
     display: grid;
-    grid-template-columns: 250px auto 50vw;
+    grid-template-columns: 250px auto 25vw;
     margin: 0 0.3rem 0 0;
 }
 
@@ -221,23 +224,33 @@ main{
 }
 
 .middle .feed{
-    padding: 1rem 0.3rem;
+    padding: 1rem 1rem;
     background: var(--color-highlighter);
     border-radius: 1rem;
     align-items: center;
     justify-content:space-evenly;
-    margin: 1rem 0.3rem;
+    margin: 1rem 1rem;
     line-height: 1.5;
-    word-wrap: break-word;
 }
 
-.middle .addfriend .connect p{
-    word-wrap: break-word;
+.feed-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
 }
 
+.feed-title h2{
+    font-size: 1.5rem;
+}
 
 .feed hr{
     padding:0 1rem;
+}
+
+.feed:hover{
+    opacity: 0.8;
+    /*background-color: var(--color-main);*/
 }
 
 .feed-details{
@@ -266,10 +279,8 @@ main{
     border-radius: 1rem;
 }
 
-.middle .messages-post:hover{
+.feed i:hover{
     opacity: 0.8;
-    cursor: pointer;
-    background-color: var(--color-highlighter);
 }
 
 .feed-btns{
@@ -327,7 +338,7 @@ main{
 }
 
 .phone-searchbar .search-bar input[type="text"]:focus {
-    width: auto;
+    width: 70vw;
     outline : none;
     border: transparent;
 }
@@ -337,44 +348,24 @@ main{
     width: 2.2rem;
 }
 
-.middle .message-feed  .msg-category{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-}
-
-.middle .message-feed  .msg-category h6{
-    width: 50%;
-    text-align: center;
-    border-bottom: 4px solid gray;
-    padding-bottom: 0.5rem;
-    font-size: 0.85rem;
-}
-
-.middle .message-feed  .msg-category .active{
-    border-color: white;
-}
-
-.middle .addfriend{
-    height: 90vh;
-}
-
 
 /**************************RIGHT*******************************/
 
 .right{
     height: 100vh;
-    width: auto;
+    width: 25vw;
 }
 
 .right .tags{
     translate: all 300ms ease;
+    width: 25vw;
 }
 
 .right .sidebar-ads{
     overflow: hidden;
     margin-top: 0.5 rem;
     padding: 0 0;
+    width: 25vw;
     align-items: center;
     justify-content: center;
 }
@@ -391,15 +382,6 @@ main{
     padding-right: 5%;
 }
 
-.right .message-board{
-    height: 90vh;
-    background-color: var(--color-dark);
-}
-
-.right .message-board .create-message{
-    font-size: large;
-}
-
 .right .tags .tag-item{
     cursor: pointer;
     display: flex;
@@ -412,7 +394,9 @@ main{
     background-color: var(--color-highlighter);
 }
 
-
+.right .tags ul {
+    list-style-type: none;
+}
 
 .search-bar{
     background: white;
@@ -423,15 +407,14 @@ main{
 .right .uprightcontain{
     display: flex;
     align-items: center;
-    justify-content: center;
     position: sticky;
     top: 0;
     right: 0;
 }
 
 .right .uprightcontain .search-bar{
-    width: 50%;
-	padding: 0rem 1rem 0;
+    width: 95%;
+	padding: 0rem 1rem;
     outline: 0;
     margin: 2vh 0.5rem;
 }
@@ -452,7 +435,7 @@ main{
     
 } 
 
-.right .messages
+
 
 
 
@@ -461,7 +444,7 @@ main{
 }
 
 .right .uprightcontain .search-bar input[type="search"] {
-	width: 100%;
+	width: 30vw;
     
 }
 
@@ -475,7 +458,7 @@ main{
 
 
 .right .uprightcontain .search-bar input[type="text"]:focus {
-    width: 100%;
+    width: 200px;
     outline : none;
     border: transparent;
     }
@@ -487,83 +470,7 @@ main{
 .minidropdown, .mini-sidebar .nav, .mini-sidebar .dropdown, .mini-sidebar hr, .vlogo-mini-sidebar, .mini-sidebar{
     display: none;
 }
-.middle .page-header{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    right: 0;
-}
 
-.middle .page-header .search-bar{
-    display: flex;
-    width: 90%;
-	padding: 0rem 1rem 0;
-    outline: 0;
-    margin-left:2rem; 
-} 
-
-.middle .page-header .search-bar i{
-    align-items: center;
-    color: #343a40;
-}
-
-.search-bar i{
-    color: #343a40;
-}
-
-.search-bar input[type="search"]{
-	width: 100%;
-}
-
-.search-bar input[type="search"]{
-	background: transparent;
-    font-size: 0.8rem;
-    color: #343a40;
-    outline: none;
-    border: transparent;
-}
-
-.search-bar input[type="text"]:focus{
-    width: auto;
-    outline : none;
-    border: transparent;
-}
-
-.search-bar input[type="text"]{
-    width: 100%;
-    outline : none;
-    border: transparent;
-}
-
-.middle .page-header .search-bar{
-    display: none;
-}
-
-.right .create-message{
-    background-color: var(--color-highlighter);
-    color: white;
-    padding-left: 1;
-}
-
-.desktop-screen .right .message-board{
-    margin: 1vh;
-    border: 1px solid grey;
-}
-
-
-.right .page-header{
-    display:none;
-}
-
-.right .boxthing{
-    height: 88vh;
-}
-.middle .feed{
-    width: 90%;
-    padding-left: 1rem;
-}
 /***************************************HOW TO BE RESPONSIVE*************************/
 
 
@@ -596,7 +503,7 @@ main{
 
     .desktop-screen{
         display: grid;
-        grid-template-columns: 4rem auto 50vw;
+        grid-template-columns: 4rem auto 25vw;
     }
 
     .feed-details, .feed-title, .feed-btns, .feed-post, .community-feed{
@@ -624,18 +531,13 @@ main{
     .mini-sidebar{
         height: 100vh;
     }
-
-    .middle .feed{
-        width: 90%;
-        padding-left: 0rem;
-    }
 }
 
 @media (max-width: 768px) {
 
     .desktop-screen{
         display: grid;
-        grid-template-columns: 4rem 0 auto;
+        grid-template-columns: 4rem auto 0;
     }
     
     .measure{
@@ -643,28 +545,21 @@ main{
     }
 
     .feed-details, .feed-title, .feed-btns, .feed-post, .community-feed{
-        display: none;
+        padding: 0 0.5rem;
     }
 
     .middle .feed{
-        display: none;
+        margin: 0.5rem;
     }
 
-    .right .page-header{
-        display: flex;
+    .right .uprightcontain, .right .tags{
+        display: none;
     }
 
     .middle .tag-management .rspn1{
-        display: none;
+        display: flex;
     }
 
-    .middle .page-header .search-bar{
-        display: none;
-    }
-
-    .desktop-screen .right .message-board .card-message{
-        display: auto;
-    }
 
 }
 
